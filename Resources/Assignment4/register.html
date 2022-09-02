@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        
+        <section>
+            <h1>Assignment 4 - Bambang (1234567)</h1>
+        </section>
+        <!-- register section -->
+        <section>
+            <div>
+                <p>Have an account? Please <a href="">login</a></p>                
+                <p class="error">All inputs are required. <br>
+                    Please fix the error(s) in the username, email, password, password confirm, profile picture, not secret question, and not secret answer inputs</p>
+                <form action="" method="post">
+                    <h2>Please fill the form</h2>
+                    <div>
+                        <label for="username">Username</label>
+                        <input type="text" name="username" placeholder="Enter username with no whitespace" required>
+                    </div>                                         
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div>
+                        <label for="password">Password confirm</label>
+                        <input type="password" name="password2" placeholder="Password confirm" required>
+                    </div>                     
+                    <div>
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" placeholder="Email address for login" required>
+                    </div>                                                          
+                    <div>
+                        <label for="image">Profile Picture</label>                        
+                        <span>
+                            <input type="radio" name="picture" value="profile1"><img src="images/profile1.png">
+                            <input type="radio" name="picture" value="profile2"><img src="images/profile2.png">                    
+                            <input type="radio" name="picture" value="profile3"><img src="images/profile3.png">
+                            <br>                            
+                            <input type="radio" name="picture" value="profile4"><img src="images/profile4.png">
+                            <input type="radio" name="picture" value="profile5"><img src="images/profile5.png">
+                            <input type="radio" name="picture" value="profile6"><img src="images/profile6.png">
+                        </span>
+                    </div>
+                    <div>
+                        <label for="question">Not a security question</label>
+                        <select name="question" required>
+                            <option value="Q1">What is your favorite security question?</option>
+                            <option value="Q2">What is your favorite villain movie character?</option>
+                            <option value="Q3">Which planet do you want to go for your next vacation?</option>
+                            <option value="Q4">What is the purpose of this question?</option>
+                            <option value="Q5">When did you stop trying hard to pass this course?</option>                            
+                        </select>                        
+                    </div>
+                    <div>
+                        <label for="answer">Answer of the not security question</label>
+                        <input type="text" name="answer" placeholder="Answer of of not security question" required>
+                    </div>
+                    <div>
+                        <input type="submit" name="submit" value="Register">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </body>
+</html>

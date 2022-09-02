@@ -1,0 +1,18 @@
+# GET http://localhost:81/CSIS3280_lab10/lab10/RestAPI.php HTTP/1.1
+# content-type: application/json
+
+GET http://localhost:81/Practice/RestAPI.php HTTP/1.1
+content-type: application/json
+
+{
+     "id": 300355436
+}
+
+# POST http://localhost:81/CSIS3280_lab10/lab10/RestAPI.php HTTP/1.1
+# content-type: application/json
+
+# {
+#   "CourseCode": "CSIS-1190",
+#   "CourseName": "Excel",
+#   "CourseSection": "007"
+# }

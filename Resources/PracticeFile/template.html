@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="author" content="Bambang">
+        <title></title>   
+        <link href="css/styles.css" rel="stylesheet">     
+    </head>
+    <body>        
+        <header>
+            <h1>Practice that Rules out all assignments -- Bambang (1234567)</h1>
+        </header>
+        <article>
+        
+            <!-- Start the login entry form --> 
+            <section class="form_login">
+                <h3>Login</h3>
+                <form action="" method="post">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Username</td>
+                                <td><input type="text" name="username" placeholder="Enter Username"></td>
+                            </tr>
+                            <tr>
+                                <td>Password</td>
+                                <td><input type="password" name="password" placeholder="Enter password"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="submit" name="login" value="Login"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </section>
+            <!-- Start the filter data form --> 
+            <section class="form_filter">
+                <form action="" method="post">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Department</td>
+                                <td>
+                                    <select name="deptID">
+                                        <option value=''>All</option>
+                                        <option value="1">Marketing</option>
+                                        <option value="2">Business Administration</option>
+                                        <option value="3">Computing Studies</option>
+                                        <option value="4">Accounting</option>
+                                        <option value="5">Finance</option>                            
+                                    </select>
+                                </td>
+                                <td width="20%">
+                                    <input type="hidden" name="sortby" value="">
+                                    <input type="hidden" name="sortorder" value="">
+                                    <input type="submit" name="filter" value="Filter Data">
+                                </td>
+                            </tr>                            
+                        </tbody>
+                    </table>
+                </form>
+            </section>
+
+            <!-- Start the sort data form --> 
+            <section class="form_sort">
+                <form action="" method="post">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Sort By
+                                </td>
+                                <td>
+                                    <select name="sortby">
+                                        <option value="">None</option>
+                                        <option value="id">Student ID</option>
+                                        <option value="fullName">Student Name</option>
+                                        <option value="email">Email</option>
+                                        <option value="doj">Date of Join</option>
+                                        <option value="terms">Number of Terms</option>
+                                        <option value="deptID">Department</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    Sort Order
+                                </td>
+                                <td>
+                                    <select name="sortorder">
+                                        <option value="">None</option>
+                                        <option value="asc">Ascending</option>
+                                        <option value="desc">Descending</option>
+                                    </select>
+                                </td>                                
+                                <td width="20%">
+                                    <input type="hidden" name="filter" value="">
+                                    <input type="submit" name="sort" value="Sort Data">
+                                </td>
+                            </tr>                            
+                        </tbody>
+                    </table>
+                </form>
+            </section>
+            
+            <!-- Start the logout entry form --> 
+            <section class="form_logout">
+                <h3>Logout</h3>
+                <form action="" method="post">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Hi username!</td>
+                                <td><input type="submit" name="logout" value="Logout"></td>
+                            </tr>                        
+                        </tbody>
+                    </table>
+                </form>
+            </section>
+            <!-- Start the page's show data form -->
+            <section class="main">
+            <h2>Current Data</h2>
+            <table id="data">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Student Name</th>                        
+                        <th>Department</th>
+                        <th>Detail</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="oddRow">
+                        <td>300357264</td>
+                        <td>Judd Twigge</td>                        
+                        <td>Marketing</td>
+                        <td><a href="http://localhost/csis3280_2022/Assignment/Assignment5/Lab07.php?action=detail&amp;id=300357264">Detail</a></td>
+                        <td><a href="http://localhost/csis3280_2022/Assignment/Assignment5/Lab07.php?action=delete&amp;id=300357264">Delete</a></td>
+                    </tr>
+                    <tr class="evenRow">
+                        <td>300357649</td>
+                        <td>Stanly Binning</td>                        
+                        <td>Marketing</td>
+                        <td><a href="http://localhost/csis3280_2022/Assignment/Assignment5/Lab07.php?action=detail&amp;id=300357649">Detail</a></td>
+                        <td><a href="http://localhost/csis3280_2022/Assignment/Assignment5/Lab07.php?action=delete&amp;id=300357649">Delete</a></td>
+                    </tr>                    
+                </tbody>
+            </table>
+        </section>     
+        
+        
+        
+        <!-- Start the display detail data form --> 
+        <section class="detail">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">
+                            Detail for student with ID 300XXXXXX
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Full Name</td>
+                        <td>Full Name</td>                        
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>Email</td>                        
+                    </tr>
+                    <tr>
+                        <td>Date of Join</td>
+                        <td>Date of Join</td>                        
+                    </tr>               
+                    <tr>
+                        <td>Number of Terms</td>
+                        <td>Number of Terms</td>                        
+                    </tr>             
+                    <tr>
+                        <td>Department</td>
+                        <td>Department</td>                        
+                    </tr>             
+                </tbody>
+            </table>
+        </section>
+        <!-- Start the page's add entry form -->
+        <section class="form1">
+            <h3>Add Student</h3>
+            <form action="" method="post">
+                <table>
+                    <tbody><tr>
+                        <td>Student ID</td>
+                        <td><input type="text" name="id" placeholder="300XXXXXX"></td>
+                    </tr>
+                    <tr>
+                        <td>Full Name</td>
+                        <td><input type="text" name="fullName"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" name="email"></td>
+                    </tr>                        
+                    <tr>
+                        <td>Date of Join</td>
+                        <td><input type="date" name="doj"></td>
+                    </tr>
+                    <tr>
+                        <td>Terms</td>
+                        <td><input type="number" min="1" max="8" step="1" name="terms"></td>
+                    </tr>
+                    <tr>
+                        <td>Department</td>
+                        <td>
+                            <select name="deptID">
+                                <option value="1">Marketing</option>
+                                <option value="2">Business Administration</option>
+                                <option value="3">Computing Studies</option>
+                                <option value="4">Accounting</option>
+                                <option value="5">Finance</option>                            
+                            </select>
+                        </td>
+                    </tr>
+                </tbody></table>
+                <input type="hidden" name="action" value="create">
+                <input type="submit" value="Add Student">
+            </form>
+        </section>
+
+        <!-- Start the page's footer -->            
+    </article>    
+</body>
+</html>

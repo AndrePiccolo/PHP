@@ -1,0 +1,137 @@
+<!-- Start the page 'header' -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="author" content="">
+        <title></title>   
+        <link href="css/stylesB.css" rel="stylesheet">     
+    </head>
+    <body>
+        <header>
+            <h1>There should be something here</h1>
+        </header>
+        <article>
+            <!-- Start the page's show data form -->
+            <section class="main">
+                <h2>Current Data</h2>
+                <table id="list">
+                    <thead>
+                        <tr>
+                            <th>Reservation ID</th>
+                            <th>Rooms</th>
+                            <th>Days</th>                                       
+                            <th>Rooms Type</th>
+                            <th>Cost</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                    </thead>
+                    <tbody>
+                        <tr class="oddRow">
+                            <td>RY738</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>Standard Rooms</td>
+                            <td>$320.00</td>
+                            <td><a href="?action=edit&id=">Edit</a></td>
+                            <td><a href="?action=delete&id=">Delete</td>
+                        </tr>
+                        <tr class="evenRow">
+                            <td>RX053</td>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>Standard Rooms</td>
+                            <td>$640.00</td>
+                            <td><a href="?action=edit&id=">Edit</a></td>
+                            <td><a href="?action=delete&id=">Delete</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>        
+        <!-- Start the page's add entry form -->
+            <section class="form1">
+                <h3>Add a New Reservation</h3>
+                <form action="" method="post">
+                    <table>
+                        <tr>
+                            <td>Reservation ID</td>
+                            <td><input type="text" name="reservationID" id="reservationID" placeholder="R{X|Y}XXX"></td>
+                        </tr>
+                        <tr>
+                            <td>Rooms</td>
+                            <td><input type="text" name="rooms" id="rooms" placeholder="1 to 3"></td>
+                        </tr>
+                        <tr>
+                            <td>Days</td>
+                            <td><input type="text" name="days" id="days" placeholder="1 to 5"></td>
+                        </tr>                                                
+                        <tr>
+                            <td>RoomsType</td>
+                            <td>
+                                <!-- The options and selected should be queried from the database -->
+                                <select name="roomsTypeID">
+                                    <option value="1">Standard Rooms</option>
+                                    <option value="2">Deluxe Rooms</option>
+                                    <option value="3">Luxury Rooms</option>                            
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="hidden" name="action" value="create">
+                    <input type="submit" value="Add Reservation">
+                </form>
+            </section>
+
+            <!-- Start the page's edit entry form -->
+            <!-- The form only appears if we have $_GET['action']==edit -->          
+            <section class="form1">
+                <!-- Here is assuming to edit the first entry -->
+                <!-- The values and text should be queried from the database -->
+                <h3>Edit Reservation - DO YOU WANT TO SHOW THE ID HERE? WHICH ONE?</h3>
+                <!-- Why do we need to set the form action again? -->                
+                <!-- Start the page's edit entry form -->        
+                <form action="" method="post">
+                    <table>
+                        <tr>
+                            <td>Reservation ID</td>
+                            <td><!-- The text should be queried from the database --></td>
+                        </tr>
+                        <tr>
+                            <td>Rooms</td>
+                            <td>
+                                <input type="text" name="rooms" id="rooms" placeholder="0 to 5" value="<!-- The value should be queried from the database -->">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Days</td>
+                            <td>
+                                <input type="text" name="days" id="days" placeholder="1 to 10" value="<!-- The value should be queried from the database -->">
+                            </td>
+                        </tr>                    
+                        <tr>
+                            <td>RoomsType</td>
+                            <td>
+                                <!-- The options and selected should be queried from the database -->
+                                <select name="roomsTypeID">
+                                    <option value="1" selected="">Standard Rooms</option>
+                                    <option value="2">Deluxe Rooms</option>
+                                    <option value="3">Luxury Rooms</option>                            
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- Why do we need to send the reservationID again? -->
+                    <input type="hidden" name="reservationID" value="<!-- The value should be queried from the database -->">
+                    <!-- The action hidden input is for the controller purpose -->
+                    <input type="hidden" name="action" value="edit">                    
+                    <input type="submit" value="Edit Reservation">                
+                </form>
+            </section>
+    <!-- Start the page's footer -->            
+        </article>
+    </body>
+
+</html>
+
+    
